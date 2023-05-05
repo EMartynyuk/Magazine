@@ -1,20 +1,57 @@
-@import 'vars'; /* Переменные из SCSS*/
-@import 'fonts'; /* Шрифты */
-@import 'reset'; /* Обнуление CSS*/
-@import 'global'; /* Глобальные стили*/
+@import "vars"; /* Переменные из SCSS*/
+@import "fonts"; /* Шрифты */
+@import "reset"; /* Обнуление CSS*/
+@import "global"; /* Глобальные стили*/
 
 /* Ниже пишется основа*/
 
+.header {
+  &__top {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 51px;
+  }
+
+  &__logo {
+    margin-right: 146px;
+  }
+
+  &__navigation {
+    
+  }
+
+  &__items {
+    display: flex;
+  }
+
+  &__item +  &__item{
+    margin-left: 45px;
+  }
+
+  &__link {
+   @extend %text;
+   font-size: 15px;
+  }
+
+  &__cart {
+    margin-left: auto;
+    display: flex
+  }
+
+  &__phone {
+    @extend %text;
+    font-size: 15px;
+    
+  }
+
+  &__cart-img {
+    margin-left: 67px;
+  }
+
+  &__cart-img-link {
+  }
+}
 
 
-
-
-
-
-
-
-
-@import 'media'; /* Медиа запросы*/
-
-
-
+@import "media"; /* Медиа запросы*/
