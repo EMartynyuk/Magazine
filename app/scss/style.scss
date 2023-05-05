@@ -67,7 +67,121 @@
     border-radius: 50%;
     background-color: #998e78;
     right: -10px;
-    top: -10px
+    top: -10px;
+  }
+}
+
+.footer {
+  background-color: #f1eadc;
+  &__top {
+    padding-top: 101px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: baseline;
+  }
+
+  &__logo {
+    margin-right: 146px;
+  }
+
+  &__navigation {
+  }
+
+  &__items {
+    display: flex;
+  }
+
+  &__item + &__item {
+    margin-left: 45px;
+  }
+
+  &__item {
+  }
+
+  &__link {
+    @extend %text;
+    font-size: 15px;
+  }
+
+  &__link--active {
+    color: $maincolor;
+    font-weight: $font-active;
+  }
+
+  &__info {
+    margin-left: auto;
+    display: flex;
+    flex-flow: column;
+    align-items: flex-end;
+    margin-bottom: 9px;
+  }
+
+  &__phone {
+    @extend %text;
+    font-size: 15px;
+    margin-bottom: 9px;
+  }
+
+  &__mail {
+    @extend %text;
+    font-size: 15px;
+  }
+
+  &__bottom {
+    padding-bottom: 101px;
+    display: flex;
+    align-items: flex-end;
+  }
+
+  &__right {
+    margin-right: 188px;
+  }
+
+  &__text {
+    font-size: 13px;
+    color: #000000;
+  }
+
+  &__text + &__text {
+    margin-top: 6px;
+  }
+
+  &__types {
+  }
+
+  &__type + &__type {
+    margin-top: 10px;
+  }
+
+  &__type-link {
+    font-weight: 400;
+    font-size: 13px;
+    color: rgba(0, 0, 0, 1);
+  }
+  
+  &__item-link {
+  }
+
+  &__socials {
+    margin-left: auto;
+    
+    
+  }
+
+  &__social {
+    margin-bottom: 30px;
+    
+  }
+
+  &__social-link + &__social-link {
+    margin-left: 12px;
+  }
+
+  &__social-img {
+  }
+
+  &__pay {
+    margin-left: auto;
   }
 }
 
