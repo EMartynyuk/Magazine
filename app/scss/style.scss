@@ -10,7 +10,7 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    padding-top: 51px;
+    padding: 51px 0 41px;
   }
 
   &__logo {
@@ -18,40 +18,57 @@
   }
 
   &__navigation {
-    
   }
 
   &__items {
     display: flex;
   }
 
-  &__item +  &__item{
+  &__item + &__item {
     margin-left: 45px;
   }
 
   &__link {
-   @extend %text;
-   font-size: 15px;
+    @extend %text;
+    font-size: 15px;
+  }
+  &__link--active {
+    color: $maincolor;
+    font-weight: $font-active;
   }
 
   &__cart {
     margin-left: auto;
-    display: flex
+    display: flex;
+    align-items: center;
   }
 
   &__phone {
     @extend %text;
     font-size: 15px;
-    
   }
 
   &__cart-img {
     margin-left: 67px;
+    position: relative;
   }
 
   &__cart-img-link {
   }
+  &__cart-num {
+    font-weight: 400;
+    font-size: 9px;
+    text-align: center;
+    color: #ffffff;
+    line-height: 15px;
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #998e78;
+    right: -10px;
+    top: -10px
+  }
 }
-
 
 @import "media"; /* Медиа запросы*/
