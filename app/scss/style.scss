@@ -4,7 +4,7 @@
 @import "global"; /* Глобальные стили*/
 
 /* Ниже пишется основа*/
-
+/*---header-------------------------------------------------------------*/
 .header {
   &__top {
     display: flex;
@@ -70,7 +70,7 @@
     top: -10px;
   }
 }
-
+/*--------Footer------------------------------------------------------ */
 .footer {
   background-color: #f1eadc;
   &__top {
@@ -82,6 +82,7 @@
 
   &__logo {
     margin-right: 146px;
+    transform: translateY(6px);
   }
 
   &__navigation {
@@ -170,6 +171,8 @@
 
   &__social {
     margin-bottom: 30px;
+    display: flex;
+    align-items: center;
     
   }
 
