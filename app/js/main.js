@@ -12,7 +12,6 @@ $(function(){
         // autoplay: true,
         // autoplaySpeed: 3000
         prevArrow: '<button type="button" class="slick-prev"><img src="../images/team-sliderarrowleft.svg"></img></button>',
-         nextArrow: '<button type="button" class="slick-next"><img src="../images/team-sliderarrowright.svg"></img></button>' 
-
+        nextArrow:  '<button type="button" class="slick-next"><img src="../images/team-sliderarrowright.svg"></img></button>'
     });
 })

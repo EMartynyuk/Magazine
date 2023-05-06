@@ -47,6 +47,18 @@
   &__phone {
     @extend %text;
     font-size: 15px;
+    position: relative;
+    padding-left: 23px;
+    &::before {
+      content: "";
+      position: absolute;
+      top: -2px;
+      left: 0;
+      background-image: url("../images/header-tel.svg");
+      width: 21px;
+      height: 21px;
+      padding: 3px 4px 6px 7px;
+    }
   }
 
   &__cart-img {
@@ -236,6 +248,10 @@
     color: #ffffff;
     background-color: $maincolor;
     padding: 22px 50px;
+    transition: all .5s ease;
+    &:hover {
+      background: rgba(80, 148, 152, 1);
+    }
   }
 
   &__arrow {
@@ -311,7 +327,7 @@
     left: 0;
     right: 0;
     background-color: rgba(110, 156, 159, 0);
-    transition: all .3s;
+    transition: all .5s ease;
     &::after {
       content: "";
       background-image: url("../images/collection-arrow.svg");
@@ -350,12 +366,18 @@
     color: $maincolor;
     padding: 22px 50px;
     border: 1px solid #6e9c9f;
+    transition: all .5s ease;
+    &:hover {
+      background: rgba(110, 156, 159, 1);
+      color: rgba(255, 255, 255, 1);
+
+    }
   }
 }
 /*------Important----------------------------------------------------------------------*/
 .important {
-
-  &__title {}
+  &__title {
+  }
 
   &__blocks {
     display: flex;
@@ -373,19 +395,19 @@
   &__subtitle {
     @extend %titleh3;
     margin-bottom: 24px;
-    
   }
 
   &__description {
     @extend %text;
-    max-width: 305px
+    max-width: 305px;
   }
 }
 
 /*-----Team---------------------------------------------------------------*/
 .team {
-padding-bottom: 190px;
-  &__title {}
+  padding-bottom: 190px;
+  &__title {
+  }
 
   &__blocks {
     display: flex;
@@ -393,10 +415,11 @@ padding-bottom: 190px;
   }
 
   &__slider {
-    max-width: 729px
+    max-width: 729px;
   }
 
-  &__slider-img {}
+  &__slider-img {
+  }
 
   .slick-dots {
     display: flex;
@@ -415,7 +438,7 @@ padding-bottom: 190px;
     }
   }
   .slick-active button {
-    background: #FFFFFF;
+    background: #ffffff;
   }
   .slick-prev,
   .slick-next {
@@ -424,13 +447,14 @@ padding-bottom: 190px;
     top: 50%;
   }
   .slick-prev {
-    left: -58px
+    left: -58px;
   }
   .slick-next {
-    right: -58px
+    right: -58px;
   }
+
   &__content {
-    max-width:257px
+    max-width: 257px;
   }
 
   &__subtitle {
@@ -446,7 +470,12 @@ padding-bottom: 190px;
 
   &__link {
     @extend %text;
-    color: $maincolor
+    color: $maincolor;
+    // padding-bottom: 5px;
+    transition: all .5s ease;
+    &:hover {
+      border-bottom: 1px solid rgba(206, 222, 223, 1);
+    }
   }
 }
 
