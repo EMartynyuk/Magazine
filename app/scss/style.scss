@@ -1,6 +1,7 @@
 @import "vars"; /* Переменные из SCSS*/
 @import "fonts"; /* Шрифты */
 @import "reset"; /* Обнуление CSS*/
+@import "libs"; /*Загрузка сторонних плагинов*/
 @import "global"; /* Глобальные стили*/
 
 /* Ниже пишется основа*/
@@ -159,21 +160,18 @@
     font-size: 13px;
     color: rgba(0, 0, 0, 1);
   }
-  
+
   &__item-link {
   }
 
   &__socials {
     margin-left: auto;
-    
-    
   }
 
   &__social {
     margin-bottom: 30px;
     display: flex;
     align-items: center;
-    
   }
 
   &__social-link + &__social-link {
@@ -185,6 +183,101 @@
 
   &__pay {
     margin-left: auto;
+  }
+}
+
+/*----------------------------- Слайдер----------------------- */
+.slider {
+  margin-bottom: 55px;
+
+  &__container {
+    max-width: 1339px;
+  }
+  &__carousel {
+  }
+
+  &__item {
+    display: flex !important;
+    justify-content: space-between;
+  }
+
+  &__content {
+    padding-top: 145px;
+    margin-left: 104px;
+  }
+
+  &__title {
+    @extend %titleh1;
+    max-width: 570px;
+    padding-bottom: 45px;
+  }
+
+  &__subtitle {
+    @extend %bigtext;
+    max-width: 385px;
+    text-align: right;
+    padding-bottom: 52px;
+  }
+
+  &__buttons {
+    display: flex;
+    max-width: 385px;
+    justify-content: flex-end;
+  }
+  &__link-arrow {
+    padding: 20px 26px;
+    background: rgba(110, 156, 159, 0.1);
+  }
+  &__link-btn {
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 138.9%;
+    text-align: center;
+    color: #ffffff;
+    background-color: $maincolor;
+    padding: 22px 50px;
+  }
+
+  &__arrow {
+  }
+
+  &__photos {
+    position: relative;
+    margin-right: 107px;
+    padding-bottom: 62px;
+  }
+
+  &__photo-1 {
+  }
+
+  &__photo-2 {
+    position: absolute;
+    right: -107px;
+    top: 123px;
+  }
+
+  &__photo-3 {
+    position: absolute;
+    left: -130px;
+    bottom: -60px;
+  }
+  .slick-dots {
+    display: flex;
+    justify-content: flex-start;
+    margin: -64px 0 0 375px;
+    position: relative;
+    li {
+      padding: 0 6px;
+    }
+    button {
+      font-size: 0;
+      width: 30px;
+      height: 4px;
+      background-color: rgba(209, 209, 209, 1);
+    }
+  }
+  .slick-active button {
+    background-color: rgba(0, 0, 0, 1);
   }
 }
 
