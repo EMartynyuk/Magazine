@@ -12,12 +12,52 @@ body {
 }
 
 .container {
-  max-width: 1125px;
+  max-width: 1140px;
   margin: 0 auto;
   padding: 0 15px;
 }
 
 .title {
-    @extend %titleh2;
-    padding: 130px 0 92px 0;
+  @extend %titleh2;
+  padding: 130px 0 92px 0;
+}
+
+.breadcrumbs {
+  &__title {
+    margin: 149px 0 26px;
+    @extend %titleh1;
+  }
+
+  &__lists {
+    margin-bottom: 214px;
+    display: flex;
+  }
+
+  &__list {
+    margin-right: 42px;
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: -28px;
+      width: 13px;
+      height: 1px;
+      background-color: rgba(0, 0, 0, 1);
+    }
+    &:last-of-type {
+      margin-right: 0;
+      &::after {
+        display: none;
+      }
+    }
+    &:last-child {
+      color: #919191;
+    }
+  }
+  
+  &__link {
+    @extend %text;
+    color: inherit
+  }
 }
