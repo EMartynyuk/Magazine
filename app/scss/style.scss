@@ -375,6 +375,10 @@
       display: block;
     }
   }
+  .star {
+    margin: 0 auto;
+    margin-bottom: 7px;
+  }
   &__name {
     @extend %titleh4;
     margin-bottom: 7px;

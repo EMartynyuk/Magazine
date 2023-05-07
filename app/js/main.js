@@ -14,4 +14,12 @@ $(function(){
         prevArrow: '<button type="button" class="slick-prev"><img src="../images/team-sliderarrowleft.svg"></img></button>',
         nextArrow:  '<button type="button" class="slick-next"><img src="../images/team-sliderarrowright.svg"></img></button>'
     });
+    $('.star').rateYo({
+        rating: 4,
+        starWidth: "12px",
+        normalFill: "#998e78",
+        ratedFill: "#6e9c9f",
+        readOnly: true
+
+      });
 })
