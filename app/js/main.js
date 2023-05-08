@@ -1,4 +1,5 @@
 $(function(){
+    var mixer = mixitup('.shop__items');
     $('.slider__carousel').slick({
         dots: true,
         arrows: false,
@@ -20,6 +21,5 @@ $(function(){
         normalFill: "#998e78",
         ratedFill: "#6e9c9f",
         readOnly: true
-
       });
 })

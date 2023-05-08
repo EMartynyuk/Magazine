@@ -511,5 +511,130 @@
   }
 }
 
-/*----------------------------------------------------------------------------*/
-@import "media"; /* Медиа запросы*/
+/*---Shop------------------------------------------------------------------*/
+.shop {
+  &__filter {
+    display: flex;
+    margin-bottom: 92px;
+  }
+
+  &__filter-item {
+    border: 1px solid #000000;
+    margin-right: 10px;
+    &:last-of-type {
+      margin-right: 0
+    }
+    .mixitup-control-active {
+      background-color: black;
+      color: white
+    }
+  }
+
+  &__filter-link {
+    @extend %text;
+    padding: 19px 65px;
+    color: inherit;
+    display: inline-block;
+    background-color: transparent;
+  }
+
+  &__info {
+    margin-bottom: 65px;
+    @extend %text;
+    color: #808080;
+    &:last-of-type {
+      margin-top: 65px;
+    }
+  }
+
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 65px 30px
+  }
+
+  &__item {
+    text-align: center;
+  }
+
+  &__effect {
+    position: relative;
+  }
+
+  &__item-img {
+    margin-bottom: 24px;
+  }
+
+  &__item-link {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(110, 156, 159, 0);
+  transition: all 0.5s ease;
+  &::after {
+    content: "";
+    background-image: url("../images/collection-arrow.svg");
+    width: 31px;
+    height: 22px;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 48%;
+    left: 46%;
+    display: none;
+  }
+  &:hover {
+    background-color: rgba(110, 156, 159, 0.64);
+  }
+  &:hover::after {
+    display: block;
+  }
+  }
+
+  &__name {
+    @extend %titleh4;
+    margin-bottom: 7px;
+  }
+
+  &__price {
+    @extend %cartitem;
+    span {
+      text-decoration: line-through;
+      margin-right: 10px;
+    }
+  }
+  &__img {
+    }
+
+    &__link {
+    }
+
+    &__pages {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 130px;
+      align-items: center
+    }
+
+    &__page {
+      @extend %text;
+      padding: 9px 15px;
+      max-width:40px;
+      border: 1px solid #000000;
+      margin-right: 14px;
+      &:last-of-type {
+        margin-right: 0;
+        border: none;
+        max-width:none;
+        padding: 9px 0;
+      }
+    }
+  }
+
+
+
+
+/*------------------------------------------------------------------*/
+
+@import "media"; /*Медиа запросы*/
