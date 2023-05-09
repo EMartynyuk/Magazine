@@ -822,5 +822,80 @@
   }
 }
 
+/*--------Contact----------------------------------------------------------*/
+.contact {
+  &__img {
+    margin-bottom: 130px;
+  }
+
+  &__info {
+    margin-bottom: 130px;
+    display: flex;
+    max-width: 943px;
+    justify-content: space-between;
+  }
+
+  &__items {
+  }
+
+  &__item-title {
+    @extend %text;
+    margin-bottom: 19px;
+  }
+
+  &__item-text {
+    @extend %titleh4;
+  }
+
+  &__form {
+    margin-bottom: 276px;
+    display: flex;
+    flex-flow: column;
+    max-width: 443px;
+  }
+
+  &__title {
+    @extend %titleh3;
+    margin-bottom: 62px;
+  }
+
+  &__input {
+    margin-bottom: 35px;
+    max-width: 350px;
+    border-bottom: 1px solid #000000;
+    padding: 0 0 16px 0;
+    &::placeholder {
+      @extend %text;
+      color: #868686;
+    }
+  }
+
+  &__textarea {
+    max-width: 443px;
+    border-bottom: 1px solid #000000;
+    margin-bottom: 35px;
+    height: 134px;
+    resize: none;
+    &::placeholder {
+      @extend %text;
+      color: #868686;
+    }
+  }
+  &__btn {
+    
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 138.9%;
+    text-align: center;
+    letter-spacing: 0.02em;
+    color: #ffffff;
+    padding: 22px 50px;
+    background-color: $maincolor;
+    max-width: 189px;
+  }
+}
+.container {
+}
+
 /*------------------------------------------------------------------*/
 @import "media"; /*Медиа запросы*/
