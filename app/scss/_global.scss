@@ -26,13 +26,19 @@ body {
   &__title {
     margin: 149px 0 26px;
     @extend %titleh1;
+    
   }
-
+  .product-title {
+    margin: 110px 0 26px;
+  }
   &__lists {
     margin-bottom: 214px;
     display: flex;
+    
   }
-
+  .product-lists {
+    margin-bottom: 102px;
+  }
   &__list {
     margin-right: 42px;
     position: relative;

@@ -21,7 +21,7 @@
                 <nav class="header__navigation">
                     <ul class="header__items">
                         <li class="header__item">
-                            <a class="header__link" href="index.html">Главная</a>
+                            <a class="header__link " href="">Главная</a>
                         </li>
                         <li class="header__item">
                             <a class="header__link header__link--active" href="">Магазин</a>
@@ -49,130 +49,113 @@
 
         <div class="breadcrumbs">
             <div class="container">
-                <h2 class="breadcrumbs__title">Магазин</h2>
-                <ul class="breadcrumbs__lists">
+                <h2 class="breadcrumbs__title product-title">Свитшот Sweet Shot</h2>
+                <ul class="breadcrumbs__lists product-lists">
                     <li class="breadcrumbs__list">
-                        <a href="index.html" class="breadcrumbs__link">Главная</a>
+                        <a href="#" class="breadcrumbs__link">Главная</a>
                     </li>
                     <li class="breadcrumbs__list">
-                        <span href="#" class="breadcrumbs__link">Магазин</span>
+                        <a href="shop.html" class="breadcrumbs__link">Магазин</a>
+                    </li>
+                    <li class="breadcrumbs__list">
+                        <span href="#" class="breadcrumbs__link">Свитшот Sweet Shot</span>
                     </li>
                 </ul>
             </div>
         </div>
 
-        <section class="shop">
+        <section class="product">
             <div class="container">
-                <ul class="shop__filter">
-                    <li class="shop__filter-item ">
-                        <button href="" class="shop__filter-link" data-filter="all">Все</button>
-                    </li>
-                    <li class="shop__filter-item">
-                        <button href="" class="shop__filter-link" data-filter=".category-a">Пальто</button>
-                    </li>
-                    <li class="shop__filter-item">
-                        <button href="" class="shop__filter-link" data-filter=".category-b">Свитшоты</button>
-                    </li>
-                    <li class="shop__filter-item">
-                        <button href="" class="shop__filter-link" data-filter=".category-c">Кардиганы</button>
-                    </li>
-                    <li class="shop__filter-item">
-                        <button href="" class="shop__filter-link" data-filter=".category-d">Толстовки</button>
-                    </li>
-                </ul>
-                <p class="shop__info">Показано: 9 из 12 товаров</p>
-                <div class="shop__items">
-                    <div class="shop__item mix category-a category-d">
-                        <div class="shop__effect">
-                            <img src="images/collection-img.jpg" alt="" class="shop__item-img">
-                            <a href="" class="shop__item-link"></a>
+                <div class="product__inner">
+                    <div class="product__top">
+                        <img class="product__img" src="images/product.jpg" alt="">
+                        <div class="product__content">
+                            <p class="product__price">$311 <span class="product__prevprice">$450</span></p>
+                            <form class="product__form" action="">
+                                <p class="product__descr">Выберите размер</p>
+                                <label class="product__label">
+                                    <input class="product__input" type="radio" name="size">
+                                    <span class="product__checkbox">S</span>
+                                </label>
+                                <label class="product__label">
+                                    <input class="product__input" type="radio" name="size">
+                                    <span class="product__checkbox">M</span>
+                                </label>
+                                <label class="product__label">
+                                    <input class="product__input" type="radio" name="size">
+                                    <span class="product__checkbox">L</span>
+                                </label>
+                                <label class="product__label">
+                                    <input class="product__input" type="radio" name="size">
+                                    <span class="product__checkbox">XL</span>
+                                </label>
+                                <label class="product__label">
+                                    <input class="product__input" type="radio" name="size">
+                                    <span class="product__checkbox">XXL</span>
+                                </label>
+
+                                <p class="product__descr">Выберите цвет</p>
+
+                                <label class="product__labelcolor">
+                                    <input class="product__inputcolor" type="radio" name="color">
+                                    <span class="product__checkbox-color" style="background-color: #927876;">
+
+                                    </span>
+                                </label>
+                                <label class="product__labelcolor">
+                                    <input class="product__inputcolor" type="radio" name="color">
+                                    <span class="product__checkbox-color" style="background-color: #D5D5D5;">
+                                    </span>
+                                </label>
+                                <label class="product__labelcolor">
+                                    <input class="product__inputcolor" type="radio" name="color">
+                                    <span class="product__checkbox-color" style="background-color: #FD9696;">
+                                    </span>
+                                </label>
+                                <label class="product__labelcolor">
+                                    <input class="product__inputcolor" type="radio" name="color">
+                                    <span class="product__checkbox-color" style="background-color: #FDC796;">
+                                    </span>
+                                </label>
+
+
+                                <div class="product__final">
+                                    <input class="product__amount" type="number" min="1" value="1">
+                                    <button class="product__button" type="submit">Добавить в корзину</button>
+                                </div>
+
+                            </form>
                         </div>
-                        <p class="shop__name">Футболка USA</p>
-                        <p class="shop__price"><span>$229</span>
-                            $129</p>
                     </div>
-                    <div class="shop__item mix category-b category-d">
-                        <div class="shop__effect">
-                            <img src="images/collection-img2.jpg" alt="" class="shop__item-img">
-                            <a href="" class="shop__item-link"></a>
+                    <div class="product__bottom">
+                        <h3 class="product__bottom-title title">Связанные товары</h3>
+                        <div class="product-another collection__photos">
+                            <div class="collection__item">
+                                <div class="collection__effect">
+                                    <img src="images/collection-img.jpg" alt="" class="collection__img">
+                                    <a href="" class="collection__link"></a>
+                                </div>
+                                <div class="star product-star"></div>
+                                <p class="collection__name">Футболка USA</p>
+                                <p class="collection__price"><span>$229</span>
+                                    $129</p>
+                            </div>
+                            <div class="collection__item">
+                                <div class="collection__effect">
+                                    <img src="images/collection-img2.jpg" alt="" class="collection__img">
+                                    <a href="" class="collection__link"></a>
+                                </div>
+                                <div class="star product-star"></div>
+                                <p class="collection__name">Купальник Glow</p>
+                                <p class="collection__price">
+                                    $129</p>
+                            </div>
+
                         </div>
-                        <p class="shop__name">Купальник Glow</p>
-                        <p class="shop__price">
-                            $129</p>
                     </div>
-                    <div class="shop__item mix category-c category-d">
-                        <div class="shop__effect">
-                            <img src="images/collection-img3.jpg" alt="" class="shop__item-img">
-                            <a href="" class="shop__item-link"></a>
-                        </div>
-                        <p class="shop__name">Свитшот Sweet Shot</p>
-                        <p class="shop__price">
-                            $129</p>
-                    </div>
-                    <div class="shop__item mix category-a">
-                        <div class="shop__effect">
-                            <img src="images/collection-img.jpg" alt="" class="shop__item-img">
-                            <a href="" class="shop__item-link"></a>
-                        </div>
-                        <p class="shop__name">Футболка USA</p>
-                        <p class="shop__price"><span>$229</span>
-                            $129</p>
-                    </div>
-                    <div class="shop__item mix category-b">
-                        <div class="shop__effect">
-                            <img src="images/collection-img2.jpg" alt="" class="shop__item-img">
-                            <a href="" class="shop__item-link"></a>
-                        </div>
-                        <p class="shop__name">Купальник Glow</p>
-                        <p class="shop__price">
-                            $129</p>
-                    </div>
-                    <div class="shop__item mix category-c">
-                        <div class="shop__effect">
-                            <img src="images/collection-img3.jpg" alt="" class="shop__item-img">
-                            <a href="" class="shop__item-link"></a>
-                        </div>
-                        <p class="shop__name">Свитшот Sweet Shot</p>
-                        <p class="shop__price">
-                            $129</p>
-                    </div>
-                    <div class="shop__item mix category-a">
-                        <div class="shop__effect">
-                            <img src="images/collection-img.jpg" alt="" class="shop__item-img">
-                            <a href="" class="shop__item-link"></a>
-                        </div>
-                        <p class="shop__name">Футболка USA</p>
-                        <p class="shop__price"><span>$229</span>
-                            $129</p>
-                    </div>
-                    <div class="shop__item mix category-b">
-                        <div class="shop__effect">
-                            <img src="images/collection-img2.jpg" alt="" class="shop__item-img">
-                            <a href="" class="shop__item-link"></a>
-                        </div>
-                        <p class="shop__name">Купальник Glow</p>
-                        <p class="shop__price">
-                            $129</p>
-                    </div>
-                    <div class="shop__item mix category-c">
-                        <div class="shop__effect">
-                            <img src="images/collection-img3.jpg" alt="" class="shop__item-img">
-                            <a href="" class="shop__item-link"></a>
-                        </div>
-                        <p class="shop__name">Свитшот Sweet Shot</p>
-                        <p class="shop__price">
-                            $129</p>
-                    </div>
-                </div>
-                <p class="shop__info">Показано: 9 из 12 товаров</p>
-                <div class="shop__pages">
-                    <a href="" class="shop__page shop__page--active">1</a>
-                    <a href="" class="shop__page">2</a>
-                    <a href="" class="shop__page">
-                        <img src="images/shop-arrow.svg" alt="" class="shop__page-arrow">
-                    </a>
                 </div>
         </section>
+
 
     </main>
 
@@ -183,7 +166,7 @@
                 <nav class="footer__navigation">
                     <ul class="footer__items">
                         <li class="footer__item">
-                            <a class="footer__link" href="index.html">Главная</a>
+                            <a class="footer__link " href="">Главная</a>
                         </li>
                         <li class="footer__item">
                             <a class="footer__link footer__link--active" href="">Магазин</a>
