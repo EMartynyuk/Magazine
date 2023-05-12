@@ -15,17 +15,26 @@ body {
   max-width: 1140px;
   margin: 0 auto;
   padding: 0 15px;
-  // @media (max-width:1140px) {
-  // max-width:970px}
-  // @media (max-width:991.98px) {
-  // max-width:750px}
-  // @media (max-width:767.98px) {
-  // max-width:none}
+  @media (max-width: 1140px) {
+    max-width: 960px;
+  }
+  @media (max-width: 992px) {
+    max-width: 720px;
+  }
+  @media (max-width: 768px) {
+    max-width: 540px;
+  }
+  @media (max-width: 576px) {
+    max-width: none;
+  }
 }
 
 .title {
   @extend %titleh2;
   padding: 130px 0 92px 0;
+  @media (max-width: 576px) {
+    text-align: center;
+  }
 }
 
 .breadcrumbs {

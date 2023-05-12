@@ -1,5 +1,8 @@
 $(function () {
-  
+  $(".header__navigation-btn, .header__link").on("click", function () {
+    $(".header__navigation--hidden").toggleClass("header__navigation--active");
+  });
+
   $(".slider__carousel").slick({
     dots: true,
     arrows: false,
@@ -16,6 +19,15 @@ $(function () {
       '<button type="button" class="slick-prev"><img src="../images/team-sliderarrowleft.svg"></img></button>',
     nextArrow:
       '<button type="button" class="slick-next"><img src="../images/team-sliderarrowright.svg"></img></button>',
+    responsive: [
+        {
+          breakpoint: 1084,
+          settings: {
+            arrows: false,
+          }
+        }
+     ]
+  
   });
   $(".star").rateYo({
     rating: 4,
