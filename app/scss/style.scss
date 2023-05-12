@@ -44,6 +44,7 @@
   &__link--active {
     color: $maincolor;
     font-weight: $font-active;
+    pointer-events: none;
   }
 
   &__cart {
@@ -132,6 +133,7 @@
   &__link--active {
     color: $maincolor;
     font-weight: $font-active;
+    pointer-events: none;
   }
 
   &__info {
@@ -873,9 +875,6 @@
       @extend %text;
       color: #868686;
     }
-    &:enabled {
-      border-bottom: 1px solid red;
-    }
   }
 
   &__textarea {
@@ -1213,6 +1212,10 @@
     transition: $transition;
     &:hover {
       @extend %btndark;
+    }
+    a {
+      color: inherit;
+      font-family: inherit;
     }
   }
 }
