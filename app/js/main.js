@@ -25,6 +25,12 @@ $(function () {
           settings: {
             arrows: false,
           }
+        },
+        {
+          breakpoint: 1260,
+          settings: {
+            arrows: false,
+          }
         }
      ]
   

@@ -40,8 +40,8 @@
       padding: 25px 0;
       left: -100%;
       right: -100%;
-      transform: translateY(-200%);
-      transition: all 3s;
+      transform: translateY(-100%);
+      transition: $transition;
       background-color: #ffffff;
     }}
   &__navigation {
