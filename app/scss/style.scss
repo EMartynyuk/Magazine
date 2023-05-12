@@ -36,10 +36,9 @@
   &__link {
     @extend %text;
     font-size: 15px;
-    transition: all 0.5s ease;
+    transition: $transition;
     &:hover {
-      color: $maincolor;
-      border-bottom: 1px solid rgba(206, 222, 223, 1);
+      @extend %linkeffect;
     }
   }
   &__link--active {
@@ -124,10 +123,9 @@
   &__link {
     @extend %text;
     font-size: 15px;
-    transition: all 0.5s ease;
+    transition: $transition;
     &:hover {
-      color: $maincolor;
-      border-bottom: 1px solid rgba(206, 222, 223, 1);
+      @extend %linkeffect;
     }
   }
 
@@ -189,10 +187,9 @@
     font-size: 13px;
     color: rgba(0, 0, 0, 1);
 
-    transition: all 0.5s ease;
+    transition: $transition;
     &:hover {
-      color: $maincolor;
-      border-bottom: 1px solid rgba(206, 222, 223, 1);
+      @extend %linkeffect;
     }
   }
 
@@ -215,7 +212,7 @@
 
   &__social-img {
     path {
-      transition: all 0.5s ease;
+      transition: $transition;
     }
     &:hover path {
       fill: $maincolor;
@@ -277,9 +274,9 @@
     color: #ffffff;
     background-color: $maincolor;
     padding: 22px 50px;
-    transition: all 0.5s ease;
+    transition: $transition;
     &:hover {
-      background: rgba(80, 148, 152, 1);
+      @extend %btndark;
     }
   }
 
@@ -356,7 +353,7 @@
     left: 0;
     right: 0;
     background-color: rgba(110, 156, 159, 0);
-    transition: all 0.5s ease;
+    transition: $transition;
     &::after {
       content: "";
       background-image: url("../images/collection-arrow.svg");
@@ -399,10 +396,9 @@
     color: $maincolor;
     padding: 22px 50px;
     border: 1px solid #6e9c9f;
-    transition: all 0.5s ease;
+    transition: $transition;
     &:hover {
-      background: rgba(110, 156, 159, 1);
-      color: rgba(255, 255, 255, 1);
+      @extend %btnlight;
     }
   }
 }
@@ -504,9 +500,9 @@
     @extend %text;
     color: $maincolor;
     // padding-bottom: 5px;
-    transition: all 0.5s ease;
+    transition: $transition;
     &:hover {
-      border-bottom: 1px solid rgba(206, 222, 223, 1);
+      @extend %linkeffect;
     }
   }
 }
@@ -572,7 +568,7 @@
     left: 0;
     right: 0;
     background-color: rgba(110, 156, 159, 0);
-    transition: all 0.5s ease;
+    transition: $transition;
     &::after {
       content: "";
       background-image: url("../images/collection-arrow.svg");
@@ -749,6 +745,10 @@
     color: #ffffff;
     padding: 22px 50px;
     background-color: $maincolor;
+    transition: $transition;
+    &:hover {
+      @extend %btndark;
+    }
   }
   &__final {
     display: flex;
@@ -819,6 +819,10 @@
     color: #ffffff;
     padding: 22px 50px;
     background-color: $maincolor;
+    transition: $transition;
+    &:hover {
+      @extend %btndark;
+    }
   }
 }
 
@@ -869,6 +873,9 @@
       @extend %text;
       color: #868686;
     }
+    &:enabled {
+      border-bottom: 1px solid red;
+    }
   }
 
   &__textarea {
@@ -893,6 +900,10 @@
     padding: 22px 50px;
     background-color: $maincolor;
     max-width: 189px;
+    transition: $transition;
+    &:hover {
+      @extend %btndark;
+    }
   }
 }
 /*------Корзина------------------------------------------------------------*/
@@ -1004,8 +1015,12 @@
     border: 1px solid $maincolor;
     background-color: transparent;
     padding: 22px 50px;
+    transition: $transition;
     &:last-of-type {
       margin-left: auto;
+    }
+    &:hover {
+      @extend %btnlight;
     }
   }
 
@@ -1045,6 +1060,11 @@
     background-color: $maincolor;
     align-self: center;
     padding: 22px 50px;
+    margin-left: auto;
+    transition: $transition;
+    &:hover {
+      @extend %btndark;
+    }
   }
 }
 
@@ -1094,11 +1114,23 @@
   &__item {
     @extend %text;
     margin-bottom: 30px;
+    position: relative;
+
     &:last-of-type {
       margin-bottom: 0;
     }
     &.sublegend {
       @extend %titleh4;
+    }
+    &.ordering__item--brown::after {
+      content: "";
+      position: absolute;
+      width: 284px;
+      height: 57px;
+      background-color: #f1eadc;
+      top: -13px;
+      left: -21px;
+      z-index: -1;
     }
   }
 
@@ -1178,6 +1210,10 @@
     font-size: 17px;
     line-height: 138.9%;
     text-align: center;
+    transition: $transition;
+    &:hover {
+      @extend %btndark;
+    }
   }
 }
 
@@ -1205,6 +1241,50 @@
 
   &__input {
   }
+}
+
+/*----Успешный заказ----------------------------------------------------------*/
+.success {
+  &__inner {
+    display: flex;
+    align-items: center;
+    margin-bottom: 144px;
+  }
+
+  &__img {
+    margin-right: 44px;
+  }
+
+  &__content {
+  }
+
+  &__subtitle {
+    @extend %titleh3;
+    margin: 10px 0 17px 0
+  }
+
+  &__text {
+    @extend %text;
+    margin-bottom: 10px;
+  }
+
+  &__back {
+   
+    margin-left: auto;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 138.9%;
+    text-align: center;
+    color: $maincolor;
+    padding: 22px 50px;
+    border: 1px solid #6E9C9F; 
+    transition: $transition;
+    &:hover {
+      @extend %btnlight
+    }
+  }
+}
+.container {
 }
 
 /*------------------------------------------------------------------*/

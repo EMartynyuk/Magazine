@@ -1,14 +1,26 @@
 $maincolor: rgba(110, 156, 159, 1);
-$accentgray: #9C9C9C;
-$accentbrown:  #998E78;
-
+$accentgray: #9c9c9c;
+$accentbrown: #998e78;
 $font-active: 700;
+$transition: all 0.5s ease;
+
+%btndark {
+  background: rgba(80, 148, 152, 1);
+}
+%btnlight {
+  background: rgba(110, 156, 159, 1);
+  color: rgba(255, 255, 255, 1);
+}
+%linkeffect {
+  color: $maincolor;
+  border-bottom: 1px solid rgba(206, 222, 223, 1);
+}
 
 %titleh1 {
   font-size: 55px;
   line-height: 110%;
   color: rgba(0, 0, 0, 1);
-  @media (max-width:991.98px) {
+  @media (max-width: 991.98px) {
     font-size: 44px;
   }
 }

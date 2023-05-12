@@ -49,80 +49,35 @@
 
         <div class="breadcrumbs">
             <div class="container">
-                <h2 class="breadcrumbs__title">Оформление заказа</h2>
+                <h2 class="breadcrumbs__title">Заказ получен</h2>
                 <ul class="breadcrumbs__lists">
                     <li class="breadcrumbs__list">
                         <a href="index.html" class="breadcrumbs__link">Главная</a>
                     </li>
                     <li class="breadcrumbs__list">
-                        <span href="#" class="breadcrumbs__link">Оформление заказа</span>
+                        <a href="ordering.html" class="breadcrumbs__link">Оформление заказа</a>
+                    </li>
+                    <li class="breadcrumbs__list">
+                        <span href="#" class="breadcrumbs__link">Заказ получен</span>
                     </li>
                 </ul>
             </div>
         </div>
 
-        <form class="ordering" action="">
+        <div class="success">
             <div class="container">
-                <div class="ordering__inner">
-                    <div class="ordering__info">
-                        <fieldset class="ordering__item ordering-main">
-                            <legend class="ordering-main__legend legend">Данные покупателя</legend>
-                            <input class="ordering-main__input input" type="text" placeholder="Имя" required>
-                            <input class="ordering-main__input input" type="email" placeholder="E-mail" required>
-                            <input class="ordering-main__input input" type="tel" placeholder="Телефон" required>
-                        </fieldset>
-                        <fieldset class="ordering__item ordering-address">
-                            <legend class="ordering-address__legend legend">Адрес получателя</legend>
-                            <input class="ordering-address__input input" type="text" placeholder="Страна">
-                            <input class="ordering-address__input input" type="text" placeholder="Город">
-                            <input class="ordering-address__input input" type="text" placeholder="Улица">
-                            <input class="ordering-address__input input" type="text" placeholder="Дом">
-                            <input class="ordering-address__input input" type="text" placeholder="Квартира">
-                        </fieldset>
-                        <fieldset class="ordering__item ordering-comment">
-                            <legend class="ordering-comment__legend legend">Комментарий</legend>
-                            <textarea class="ordering-comment__input textarea" placeholder="Страна"></textarea>
-                        </fieldset>
+                <div class="success__inner">
+                    <img class="success__img" src="images/success.svg" alt="">
+                    <div class="success__content">
+                        <p class="success__subtitle">Заказ успешно оформлен</p>
+                        <p class="success__text">Мы свяжемся с вами в ближайшее время!</p>
                     </div>
-                    <div class="ordering__final">
-                        <div class="ordering__order">
-                            <h3 class="ordering__order-title legend">Ваш заказ</h3>
-                            <div class="ordering__info-items">
-                                <ul class="ordering__info-list">
-                                    <li class="ordering__item sublegend">Товар</li>
-                                    <li class="ordering__item">Футболка USA</li>
-                                    <li class="ordering__item">Подытог</li>
-                                    <li class="ordering__item sublegend ordering__item--brown">Итого</li>
-                                </ul>
-                                <ul class="ordering__sum-list">
-                                    <li class="ordering__item sublegend">Всего</li>
-                                    <li class="ordering__item">$129</li>
-                                    <li class="ordering__item">$129</li>
-                                    <li class="ordering__item sublegend">$129</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="ordering__pay">
-                            <h3 class="ordering__pay-title legend">Способы оплаты</h3>
-                            <label class="ordering__label">
-                                <span class="ordering__input-pay-text">Оплата картой</span>
-                                <input class="ordering__input-pay" type="radio" name="payment"> 
-                                <span class="ordering__input-pay-checkbox"></span>
-                            </label>
-                            <label class="ordering__label">
-                                <span class="ordering__input-pay-text">Оплата наличными</span>
-                                <input class="ordering__input-pay" type="radio" name="payment"> 
-                                
-                                <span class="ordering__input-pay-checkbox"></span>
-                            </label>
-
-                            <button class="ordering__btn" type="submit">Разместить заказ</button>
-                        </div>
-                    </div>
+                    <a class="success__back" href="">Перейти на главную</a>
                 </div>
 
+
             </div>
-        </form>
+        </div>
 
 
 
