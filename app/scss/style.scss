@@ -1054,8 +1054,8 @@
     margin-left: 123px;
     object-fit: cover;
     @media (max-width: 768px) {
-     order: 0;
-     margin-left: 0;
+      order: 0;
+      margin-left: 0;
     }
   }
   &__content {
@@ -1126,6 +1126,9 @@
 .contact {
   &__img {
     margin-bottom: 130px;
+    @media (max-width: 576px) {
+      display: none
+    }
   }
 
   &__info {
@@ -1133,6 +1136,9 @@
     display: flex;
     max-width: 943px;
     justify-content: space-between;
+    @media (max-width: 992px) {
+      display: block;
+    }
   }
 
   &__items {
@@ -1141,6 +1147,10 @@
   &__item-title {
     @extend %text;
     margin-bottom: 19px;
+    @media (max-width: 992px) {
+      margin-top: 19px;
+      color: $accentbrown;
+    }
   }
 
   &__item-text {
