@@ -16,6 +16,24 @@
 
     <header class="header">
         <div class="container">
+            <nav class="header__navigation--hidden">
+                <ul class="header__items">
+                    <li class="header__item">
+                        <a class="header__link header__link--active" href="">Главная</a>
+                    </li>
+                    <li class="header__item">
+                        <a class="header__link" href="shop.html">Магазин</a>
+                    </li>
+                    <li class="header__item">
+                        <a class="header__link" href="brand.html">О
+                            бренде</a>
+                    </li>
+                    <li class="header__item">
+                        <a class="header__link" href="contact.html">Контакты</a>
+                    </li>
+                </ul>
+
+            </nav> 
             <div class="header__top">
                 <img class="header__logo" src="images/logo.svg" alt="">
                 <nav class="header__navigation">
@@ -34,6 +52,7 @@
                         </li>
                     </ul>
                 </nav>
+                <img class="header__navigation-btn" src="images/header-btn.svg" alt="">
                 <div class="header__cart">
                     <a class="header__phone" href="tel:+74958235412">+7 (495) 823-54-12</a>
                     <a class="header__cart-img" href="#">
@@ -79,17 +98,20 @@
                             <p class="cart__name">Футболка USA</p>
                         </li>
                         <li class="cart__list-item">
-                            <p class="cart__price">$129</p>
+                            <p class="cart__price"><span class="hidden">Цена </span>$129</p>
                         </li>
                         <li class="cart__list-item">
                             <form class="cart__amount" action="">
-                                <input class="cart__amount-input" type="number" value="1" min="1">
+                                <span class="hidden">Кол-во </span><input class="cart__amount-input" type="number" value="1" min="1">
                             </form>
                         </li>
                         <li class="cart__list-item">
-                            <p class="cart__sum">$129</p>
+                            <span class="hidden">Всего   </span><p class="cart__sum">$129</p>
                         </li>
                     </ul>
+                   
+                    
+                   
                 </div>
                 <form class="cart__submit" action="">
                     <input class="cart__submit-input" type="text" placeholder="Введите купон">
