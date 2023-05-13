@@ -42,5 +42,10 @@ $(function () {
     ratedFill: "#6e9c9f",
     readOnly: true,
   });
+
+  Fancybox.bind("[data-fancybox]", {
+  });
+
   var mixer = mixitup(".shop__items");
+
 });

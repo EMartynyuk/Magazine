@@ -5,6 +5,52 @@
 @import "global"; /* Глобальные стили*/
 
 /* Ниже пишется основа*/
+.fancybox__container {
+  --fancybox-bg: rgba(110, 156, 159, 0.95);
+  .fancybox__content>.f-button.is-close-btn {
+    top: 22px;
+    right: 19px;
+    --f-button-color:rgba(0, 0, 0, 1);
+    ;
+  }
+}
+.popup {
+  display: none;
+  &__inner{
+  margin: 0 auto;
+  width: 491px;
+  height: 503px;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  justify-content: space-around;
+  align-items: center; 
+  }
+  &__text {
+    @extend %titleh3;
+  }
+  &__input {
+    width: 350px;
+    height: 40px;
+    padding-bottom: 16px;
+    @extend %text;
+    border-bottom: 1px solid #000000;
+    &::placeholder {
+      @extend %text;
+      color: #868686;
+    }
+  }
+  &__btn {
+    font-weight: 400;
+    font-size: 17px;
+    text-align: center;
+    color: #ffffff;
+    width:351px;
+    height: 68px;
+    background-color: $maincolor;
+  }
+}
+
 /*---header-------------------------------------------------------------*/
 .header {
   background-color: white;
@@ -128,16 +174,16 @@
     @extend %text;
     font-size: 15px;
     position: relative;
-    padding-left: 23px;
+    padding-left: 20px;
     &::before {
       content: "";
       position: absolute;
-      top: -2px;
+      top: 2px;
       left: 0;
       background-image: url("../images/header-tel.svg");
-      width: 21px;
-      height: 21px;
-      padding: 3px 4px 6px 7px;
+      width: 17px;
+      height: 17px;
+      // padding: 3px 4px 6px 7px;
     }
     @media (max-width: 576px) {
       display: none;
@@ -1592,23 +1638,23 @@
     &.ordering__item--brown::after {
       content: "";
       position: absolute;
-      width:240%;
+      width: 240%;
       height: 57px;
       background-color: #f1eadc;
       top: -13px;
       left: -21px;
       z-index: -1;
       @media (max-width: 1140px) {
-        width:200%;
+        width: 200%;
       }
       @media (max-width: 992px) {
-        width:220%;
+        width: 220%;
       }
       @media (max-width: 768px) {
-        width:190%;
+        width: 190%;
       }
       @media (max-width: 576px) {
-        width:500%;
+        width: 500%;
       }
     }
   }
@@ -1639,7 +1685,6 @@
   }
 
   &__sum-list {
-    
   }
 
   &__pay {
@@ -1762,15 +1807,14 @@
   &__content {
     width: 32.43%;
     @media (max-width: 1140px) {
-      width: 42.43%
+      width: 42.43%;
     }
     @media (max-width: 992px) {
-      width: 52.43%
+      width: 52.43%;
     }
     @media (max-width: 576px) {
       width: 62%;
     }
-
   }
 
   &__subtitle {
@@ -1796,12 +1840,12 @@
     padding: 22px 50px;
     border: 1px solid #6e9c9f;
     transition: $transition;
-    width: 24.50%;
+    width: 24.5%;
     &:hover {
       @extend %btnlight;
     }
     @media (max-width: 1140px) {
-      width: 34.50%
+      width: 34.5%;
     }
     @media (max-width: 992px) {
       width: 30.43%;

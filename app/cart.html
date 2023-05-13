@@ -33,7 +33,7 @@
                     </li>
                 </ul>
 
-            </nav> 
+            </nav>
             <div class="header__top">
                 <img class="header__logo" src="images/logo.svg" alt="">
                 <nav class="header__navigation">
@@ -54,7 +54,7 @@
                 </nav>
                 <img class="header__navigation-btn" src="images/header-btn.svg" alt="">
                 <div class="header__cart">
-                    <a class="header__phone" href="tel:+74958235412">+7 (495) 823-54-12</a>
+                    <button class="header__phone" href="tel:+74958235412" data-fancybox data-src="#popup">+7 (495) 823-54-12</button>
                     <a class="header__cart-img" href="#">
                         <img src="images/header-cart.svg" alt="" class="header__cart-img-link">
                         <span class="header__cart-num">3</span>
@@ -65,6 +65,18 @@
     </header>
 
     <main class="main">
+
+        <form class="popup" id="popup">
+            <div class="popup__inner">
+                <p class="popup__text">Заказать обратный звонок</p>
+                <input class="popup__input" type="text" placeholder="Имя">
+                <input class="popup__input" type="email" placeholder="E-mail">
+                <input class="popup__input" type="tel" placeholder="Телефон">
+                <button class="popup__btn" type="submit">
+                    Заказать звонок</button>
+
+            </div>
+        </form>
 
         <div class="breadcrumbs">
             <div class="container">
@@ -93,7 +105,8 @@
                 <div class="cart__quantity">
                     <ul class="cart__list">
                         <li class="cart__list-item">
-                            <a class="cart__close-link" href=""><img class="cart__close" src="images/cart-close.svg" alt=""></a>
+                            <a class="cart__close-link" href=""><img class="cart__close" src="images/cart-close.svg"
+                                    alt=""></a>
                             <img class="cart__photo" src="images/cart-img.jpg" alt="">
                             <p class="cart__name">Футболка USA</p>
                         </li>
@@ -102,16 +115,18 @@
                         </li>
                         <li class="cart__list-item">
                             <form class="cart__amount" action="">
-                                <span class="hidden">Кол-во </span><input class="cart__amount-input" type="number" value="1" min="1">
+                                <span class="hidden">Кол-во </span><input class="cart__amount-input" type="number"
+                                    value="1" min="1">
                             </form>
                         </li>
                         <li class="cart__list-item">
-                            <span class="hidden">Всего   </span><p class="cart__sum">$129</p>
+                            <span class="hidden">Всего </span>
+                            <p class="cart__sum">$129</p>
                         </li>
                     </ul>
-                   
-                    
-                   
+
+
+
                 </div>
                 <form class="cart__submit" action="">
                     <input class="cart__submit-input" type="text" placeholder="Введите купон">
