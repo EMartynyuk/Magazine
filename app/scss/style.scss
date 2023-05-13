@@ -1019,6 +1019,10 @@
   .product-another {
     justify-content: flex-start;
     margin-bottom: 130px;
+    flex-wrap: nowrap;
+    @media (max-width: 768px) {
+      flex-wrap: wrap;
+    }
     @media (max-width: 576px) {
       justify-content: center;
     }
