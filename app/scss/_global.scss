@@ -48,10 +48,14 @@ body {
   &__lists {
     margin-bottom: 214px;
     display: flex;
+    @media (max-width: 576px) {
+      flex-wrap: wrap;
+    }
   }
   .product-lists {
     margin-bottom: 102px;
   }
+
   &__list {
     margin-right: 42px;
     position: relative;
@@ -74,9 +78,10 @@ body {
       color: #919191;
     }
   }
-
+  
+  
   &__link {
     @extend %text;
     color: inherit;
-  }
+}
 }
