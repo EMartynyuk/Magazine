@@ -1598,7 +1598,7 @@
         width:200%;
       }
       @media (max-width: 992px) {
-        width:180%;
+        width:220%;
       }
       @media (max-width: 768px) {
         width:190%;
@@ -1611,6 +1611,9 @@
 
   &__final {
     width: 27.77%;
+    @media (max-width: 992px) {
+      width: 35%;
+    }
     @media (max-width: 768px) {
       width: 40%;
     }
@@ -1632,9 +1635,7 @@
   }
 
   &__sum-list {
-    // .ordering__item:nth-of-type(2) {
-    //   margin-bottom: 55px;
-    // }
+    
   }
 
   &__pay {
@@ -1647,7 +1648,7 @@
   &__label {
     @extend %text;
     position: relative;
-    display: inline-block;
+    display: block;
     & + & {
       margin-top: 20px;
     }
@@ -1701,6 +1702,9 @@
       color: inherit;
       font-family: inherit;
     }
+    @media (max-width: 576px) {
+      width: 100%;
+    }
   }
 }
 
@@ -1736,18 +1740,41 @@
     display: flex;
     align-items: center;
     margin-bottom: 144px;
+    @media (max-width: 768px) {
+      align-items: flex-start;
+    }
+    @media (max-width: 576px) {
+      flex-wrap: wrap;
+    }
   }
 
   &__img {
     margin-right: 44px;
+    @media (max-width: 992px) {
+      margin-right: 22px;
+    }
   }
 
   &__content {
+    width: 32.43%;
+    @media (max-width: 1140px) {
+      width: 42.43%
+    }
+    @media (max-width: 992px) {
+      width: 52.43%
+    }
+    @media (max-width: 576px) {
+      width: 62%;
+    }
+
   }
 
   &__subtitle {
     @extend %titleh3;
     margin: 10px 0 17px 0;
+    @media (max-width: 768px) {
+      margin: 0 0 17px 0;
+    }
   }
 
   &__text {
@@ -1765,8 +1792,24 @@
     padding: 22px 50px;
     border: 1px solid #6e9c9f;
     transition: $transition;
+    width: 24.50%;
     &:hover {
       @extend %btnlight;
+    }
+    @media (max-width: 1140px) {
+      width: 34.50%
+    }
+    @media (max-width: 992px) {
+      width: 30.43%;
+    }
+    @media (max-width: 768px) {
+      width: 30.43%;
+      padding: 11px 25px;
+    }
+    @media (max-width: 576px) {
+      width: 100%;
+      margin-left: 0;
+      margin-top: 30px;
     }
   }
 }
