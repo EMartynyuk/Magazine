@@ -54,8 +54,9 @@
                 </nav>
                 <img class="header__navigation-btn" src="images/header-btn.svg" alt="">
                 <div class="header__cart">
-                    <a class="header__phone" href="tel:+74958235412">+7 (495) 823-54-12</a>
-                    <a class="header__cart-img" href="cart.html">
+                    <a class="header__phone" href="tel:+74958235412" data-fancybox data-src="#popup">+7 (495)
+                        823-54-12</a>
+                    <a class="header__cart-img" href="#">
                         <img src="images/header-cart.svg" alt="" class="header__cart-img-link">
                         <span class="header__cart-num">3</span>
                     </a>
@@ -65,6 +66,24 @@
     </header>
 
     <main class="main">
+
+        <form class="popup" id="popup">
+            <div class="popup__inner">
+                <p class="popup__text">Заказать обратный звонок</p>
+                <input class="popup__input" type="text" placeholder="Имя">
+                <input class="popup__input" type="email" placeholder="E-mail">
+                <input class="popup__input" type="tel" placeholder="Телефон">
+                <button class="popup__btn" type="submit" data-fancybox data-src="#popup-final">
+                    Заказать звонок</button>
+            </div>
+        </form>
+
+        <div class="popup-final" id="popup-final">
+            <div class="popup-final__inner">
+                <p class="popup-final__text">Отлично! Мы скоро вам перезвоним.</p>
+                <button class="popup-final__btn" id="popup-final__btn">Закрыть</button>
+            </div>
+        </div>
 
         <div class="breadcrumbs">
             <div class="container">

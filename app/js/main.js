@@ -46,6 +46,18 @@ $(function () {
   Fancybox.bind("[data-fancybox]", {
   });
 
+  
+  
+  document.getElementById("popup-final"), 
+
+  $('.popup-final__btn').on('click', function(){
+    $('.fancybox__container, .fancybox-focus-guard').css({'display': 'none'});
+    $('html').removeAttr('style');
+    $('html').removeClass();
+  });
+    
+  
+
   var mixer = mixitup(".shop__items");
 
 });

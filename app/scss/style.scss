@@ -5,52 +5,6 @@
 @import "global"; /* Глобальные стили*/
 
 /* Ниже пишется основа*/
-.fancybox__container {
-  --fancybox-bg: rgba(110, 156, 159, 0.95);
-  .fancybox__content>.f-button.is-close-btn {
-    top: 22px;
-    right: 19px;
-    --f-button-color:rgba(0, 0, 0, 1);
-    ;
-  }
-}
-.popup {
-  display: none;
-  &__inner{
-  margin: 0 auto;
-  width: 491px;
-  height: 503px;
-  display: flex;
-  flex-direction: column;
-  background-color: white;
-  justify-content: space-around;
-  align-items: center; 
-  }
-  &__text {
-    @extend %titleh3;
-  }
-  &__input {
-    width: 350px;
-    height: 40px;
-    padding-bottom: 16px;
-    @extend %text;
-    border-bottom: 1px solid #000000;
-    &::placeholder {
-      @extend %text;
-      color: #868686;
-    }
-  }
-  &__btn {
-    font-weight: 400;
-    font-size: 17px;
-    text-align: center;
-    color: #ffffff;
-    width:351px;
-    height: 68px;
-    background-color: $maincolor;
-  }
-}
-
 /*---header-------------------------------------------------------------*/
 .header {
   background-color: white;
