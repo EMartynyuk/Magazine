@@ -1128,10 +1128,15 @@
 
 /*--------Contact----------------------------------------------------------*/
 .contact {
-  &__img {
+  .map {
     margin-bottom: 130px;
+    height: 476px;
+    width: 100%;
     @media (max-width: 576px) {
-      display: none;
+      height: 238px;
+    }
+    [class*="ground-pane"] {
+      filter: grayscale(1)
     }
   }
 

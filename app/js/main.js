@@ -20,20 +20,19 @@ $(function () {
     nextArrow:
       '<button type="button" class="slick-next"><img src="../images/team-sliderarrowright.svg"></img></button>',
     responsive: [
-        {
-          breakpoint: 1084,
-          settings: {
-            arrows: false,
-          }
+      {
+        breakpoint: 1084,
+        settings: {
+          arrows: false,
         },
-        {
-          breakpoint: 1260,
-          settings: {
-            arrows: false,
-          }
-        }
-     ]
-  
+      },
+      {
+        breakpoint: 1260,
+        settings: {
+          arrows: false,
+        },
+      },
+    ],
   });
   $(".star").rateYo({
     rating: 4,
@@ -43,21 +42,48 @@ $(function () {
     readOnly: true,
   });
 
-  Fancybox.bind("[data-fancybox]", {
-  });
+  Fancybox.bind("[data-fancybox]", {});
 
-  
-  
-  document.getElementById("popup-final"), 
-
-  $('.popup-final__btn').on('click', function(){
-    $('.fancybox__container, .fancybox-focus-guard').css({'display': 'none'});
-    $('html').removeAttr('style');
-    $('html').removeClass();
+  $(".popup-final__btn").on("click", function () {
+    $(".fancybox__container, .fancybox-focus-guard").css({ display: "none" });
+    $("html").removeAttr("style");
+    $("html").removeClass();
   });
-    
-  
 
   var mixer = mixitup(".shop__items");
-
 });
+
+
+function init() {
+  var map = new ymaps.Map("map", {
+    center: [59.9330274988658, 30.32267787352242],
+    zoom: 16,
+  });
+
+  var placemark = new ymaps.Placemark(
+    [59.9330274988658, 30.32267787352242],
+    {
+      balloonContentHeader: "Womazing",
+      balloonContentBody: "Мы здесь!"
+    },
+    {
+      iconLayout: "default#image",
+      iconImageHref: "../images/map-marker.svg",
+      iconImageSize: [40, 40],
+      iconImageOffset: [-20, -20],
+    }
+  );
+
+  map.geoObjects.add(placemark);
+
+  map.controls.remove("geolocationControl"); // удаляем геолокацию
+  map.controls.remove("searchControl"); // удаляем поиск
+  map.controls.remove("trafficControl"); // удаляем контроль трафика
+  map.controls.remove("typeSelector"); // удаляем тип
+  map.controls.remove("fullscreenControl"); // удаляем кнопку перехода в полноэкранный режим
+  map.controls.remove("zoomControl"); // удаляем контрол зуммирования
+  map.controls.remove("rulerControl"); // удаляем контрол правил
+  map.behaviors.disable(["scrollZoom"]); // отключаем скролл карты (опционально)
+}
+
+ymaps.ready(init);
