@@ -23,12 +23,14 @@
   }
 
   &__logo {
-    margin-right: 146px;
-    @media (max-width: 1140px) {
-      margin-right: 70px;
-    }
-    @media (max-width: 576px) {
-      margin-right: 33px;
+    &-link {
+      margin-right: 146px;
+      @media (max-width: 1140px) {
+        margin-right: 70px;
+      }
+      @media (max-width: 576px) {
+        margin-right: 33px;
+      }
     }
     
   }
@@ -1179,6 +1181,9 @@
 
   &__item-text {
     @extend %titleh4;
+  }
+  &__item-link {
+    color: inherit
   }
 
   &__form {
