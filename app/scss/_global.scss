@@ -87,29 +87,59 @@ body {
     right: 19px;
     --f-button-color: rgba(0, 0, 0, 1);
   }
+  .fancybox__content>.f-button.is-close-btn {
+    --f-button-border-radius: none;
+    --f-button-color: rgba(0, 0, 0, 1);
+    --f-button-hover-color: #fff;
+    --f-button-outline-color: #000;
+    --f-button-bg: transparent;
+    --f-button-active-bg: rgba(110, 156, 159, 0.95);
+    --f-button-hover-bg: rgba(110, 156, 159, 0.95);
+}
+
+  .fancybox__content {
+  padding: 0;
+  }
+  
 }
 
 .popup {
   display: none;
+  width: 44.23%;
+  max-width: 491px;
+  @media (max-width: 992px) {
+    width: 55.23%;
+  }
+  @media (max-width: 768px) {
+    width: 66.23%;
+  }
+  @media (max-width: 576px) {
+    width: 88.23%;
+  }
   &__inner {
     margin: 0 auto;
-    width: 491px;
-    height: 503px;
     display: flex;
     flex-direction: column;
     background-color: white;
-    justify-content: space-around;
+    justify-content: flex-start;
     align-items: center;
   }
   &__text {
     @extend %titleh3;
+    width: 67.41%;
+    text-align: center;
+    margin: 70px 0 35px;
+    @media (max-width: 576px) {
+      margin: 35px 0 35px;
+    }
   }
   &__input {
-    width: 350px;
+    width: 71.28%;
     height: 40px;
     padding-bottom: 16px;
     @extend %text;
     border-bottom: 1px solid #000000;
+    margin-bottom: 35px;
     &::placeholder {
       @extend %text;
       color: #868686;
@@ -120,8 +150,9 @@ body {
     font-size: 17px;
     text-align: center;
     color: #ffffff;
-    width: 351px;
+    width: 71.28%;
     height: 68px;
+    margin-bottom: 70px;
     background-color: $maincolor;
     transition: $transition;
     &:hover {
@@ -132,19 +163,33 @@ body {
 
 .popup-final {
   display: none;
+  width: 54.05%;
+  max-width: 600px;
+  @media (max-width: 992px) {
+    width: 64.23%;
+  }
+  @media (max-width: 768px) {
+    width: 74.23%;
+  }
+  @media (max-width: 576px) {
+    width: 84.23%;
+  }
   &__inner {
-    width: 600px;
-    height: 278px;
     margin: 0 auto;
     text-align: center;
     display: flex;
     flex-flow: column;
-    justify-content: space-evenly;
+    justify-content: flex-start;
     align-items: center;
+    & + button {
+      display: none
+    }
   }
 
   &__text {
     @extend %titleh3;
+    width:76.66%;
+    margin: 70px 0 35px;
   }
 
   &__btn {
@@ -153,9 +198,11 @@ body {
     line-height: 138.9%;
     text-align: center;
     color: $maincolor;
-    padding: 22px 50px;
+    height: 68px;
     border: 1px solid #6e9c9f;
-    max-width: 168px;
+    max-width: 268px;
+    width:68%;
+    margin-bottom: 70px;
     transition: $transition;
     &:hover {
       @extend %btnlight;

@@ -16,7 +16,7 @@
 
     <header class="header">
         <div class="container">
-             <nav class="header__navigation--hidden">
+            <nav class="header__navigation--hidden">
                 <ul class="header__items">
                     <li class="header__item">
                         <a class="header__link header__link--active" href="">Главная</a>
@@ -33,7 +33,7 @@
                     </li>
                 </ul>
 
-            </nav> 
+            </nav>
             <div class="header__top">
                 <img class="header__logo" src="images/logo.svg" alt="">
                 <nav class="header__navigation">
@@ -52,7 +52,7 @@
                             <a class="header__link" href="contact.html">Контакты</a>
                         </li>
                     </ul>
-    
+
                 </nav>
                 <img class="header__navigation-btn" src="images/header-btn.svg" alt="">
                 <div class="header__cart">
@@ -71,23 +71,28 @@
 
     <main class="main">
 
-        <form class="popup" id="popup">
-            <div class="popup__inner">
-                <p class="popup__text">Заказать обратный звонок</p>
-                <input class="popup__input" type="text" placeholder="Имя">
-                <input class="popup__input" type="email" placeholder="E-mail">
-                <input class="popup__input" type="tel" placeholder="Телефон">
-                <button class="popup__btn" type="submit" data-fancybox data-src="#popup-final">
-                    Заказать звонок</button>
-            </div>
-        </form>
+        <div class="container">
+            <form class="popup" id="popup">
+                <div class="popup__inner">
+                    <p class="popup__text">Заказать обратный звонок</p>
+                    <input class="popup__input" type="text" placeholder="Имя">
+                    <input class="popup__input" type="email" placeholder="E-mail">
+                    <input class="popup__input" type="tel" placeholder="Телефон">
+                    <button class="popup__btn" type="submit" data-fancybox data-src="#popup-final">
+                        Заказать звонок</button>
+                </div>
+            </form>
 
-        <div class="popup-final" id="popup-final">
-            <div class="popup-final__inner">
-                <p class="popup-final__text">Отлично! Мы скоро вам перезвоним.</p>
-                <button class="popup-final__btn" id="popup-final__btn">Закрыть</button>
+            <div class="popup-final" id="popup-final">
+                <div class="popup-final__inner">
+                    <p class="popup-final__text">Отлично! Мы скоро вам перезвоним.</p>
+                    <button class="popup-final__btn" id="popup-final__btn">Закрыть</button>
+                </div>
             </div>
+
         </div>
+
+
 
         <section class="slider">
             <div class="container slider__container">
